@@ -1,0 +1,13 @@
+<div  ng-class="classColspan">
+    <div class="form-group">
+        <label for="{{idInputSelect}}" ng-bind="label">
+        </label>
+        <select class="form-control" id="{{idInputSelect}}" ng-model="ngModel">
+                <option ng-repeat="item in provider"
+                        ng-value="item[propriedadeValor]"
+                        ng-bind="item[propriedadeDescricao]">
+                    {{propriedadeDescricao}}</option>
+        </select>
+    </div>
+
+</div>

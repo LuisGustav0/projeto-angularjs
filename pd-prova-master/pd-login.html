@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pd-prova</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
+
+  <!-- Bootstrap ( Bibliotecas Css )-->
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+  <!-- AngularJS ( Bibliotecas Css )-->
+  <link rel="stylesheet" href="node_modules/angular-toastr/dist/angular-toastr.css">
+  <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.css">
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+  <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.css">
+  <link rel="stylesheet" href="arquitetura/directivas/pd-crud/pd-crud.css">
+
+  <!-- Estilo Customizado -->
+  <link rel="stylesheet" href="app/css/style.css">
+  <link rel="stylesheet" href="arquitetura/directivas/pd-panel/pd-panel.css">
+</head>
+<body ng-app="pdApp">
+<div class="container" ng-controller="LoginController as loginCtrl">
+  <pd-panel exibir-header="true" exibir-footer="true" >
+    <pd-panel-header>
+      <i class="fa fa-user"></i>
+      <span>Login</span>
+    </pd-panel-header>
+
+    <pd-panel-body>
+      <div class="row">
+        <pd-input-text label="Login" placeholder="Digite seu login..." ng-model="loginCtrl.entidade.login" colspan="4">
+        </pd-input-text>
+      </div>
+
+      <div class="row">
+        <pd-input-text label="Nome da Marca" placeholder="Digite sua senha" ng-model="loginCtrl.entidade.senha"
+                       colspan="3">
+        </pd-input-text>
+      </div>
+    </pd-panel-body>
+
+    <pd-panel-footer>
+      <button class="btn btn-primary" >Logar</button>
+      <button class="btn btn-warning" >Limpar</button>
+    </pd-panel-footer>
+  </pd-panel>
+</div>
+
+<!-- JQuery -->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+
+<!-- Bootstrap Js-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- AngularJS -->
+<script src="node_modules/angular/angular.js"></script>
+
+<!-- AngularJS ( Bibliotecas )-->
+<script src="node_modules/angular-messages/angular-messages.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+<script src="node_modules/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+<script src="node_modules/angular-material/angular-material.js"></script>
+<script src="node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="node_modules/angular-loading-bar/build/loading-bar.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+
+<!-- Appication -->
+<script src="app/config/pd-app-module.js"></script>
+
+<!-- Router -->
+<script src="app/config/pd-config.rotas.js"></script>
+
+<!-- Services -->
+<script src="app/service/alert.service.js"></script>
+
+<!-- Directives -->
+<script src="arquitetura/directivas/pd-input-text/pd-input-text.directive.js"></script>
+<script src="arquitetura/directivas/pd-panel/pd-panel.directive.js"></script>
+
+<!-- Controllers -->
+<script src="app/controller/login.controller.js"></script>
+</body>
+</html>
+

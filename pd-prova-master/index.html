@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>pd-prova</title>
+
+  <!-- início css -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="node_modules/angular-toastr/dist/angular-toastr.css">
+  <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+  <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+
+  <link rel="stylesheet" href="app/css/style.css">
+  <!-- fim css -->
+
+</head>
+<body ng-app="pdApp">
+
+<div class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">pd-prova</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#/cadastro-usuario">Novo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div ui-view></div>
+  </div>
+</div>
+
+<!-- início js -->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+<script src="node_modules/angular-messages/angular-messages.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-touch/angular-touch.js"></script>
+
+<script src="node_modules/angular-material/angular-material.js"></script>
+<script src="node_modules/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+<script src="node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="node_modules/angular-loading-bar/build/loading-bar.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+
+<script src="app/config/pd-app.module.js"></script>
+<script src="app/config/pd-config.rotas.js"></script>
+<script src="app/service/alert.service.js"></script>
+<script src="arquitetura/directivas/pd-input-text/pd-input-text.directive.js"></script>
+<script src="arquitetura/directivas/pd-input-checkbox/pd-input-checkbox.directive.js"></script>
+<script src="arquitetura/directivas/pd-input-date/pd-input-date.directive.js"></script>
+
+<!-- fim js -->
+</body>
+</html>

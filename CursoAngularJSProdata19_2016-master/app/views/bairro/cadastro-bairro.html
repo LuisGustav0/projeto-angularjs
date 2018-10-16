@@ -1,0 +1,53 @@
+<div ng-controller="CadastroBairroController">
+  <form name="formBairro" novalidate>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Cadastro de Bairro
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group" ng-class="{'has-error':formBairro.nomeBairro.$touched && formBairro.nomeBairro.$invalid}">
+              <label>Nome Bairro</label>
+              <input type="text" class="form-control" name="nomeBairro" ng-model="entidade.nomeBairro" ng-required="true" ng-minlength="3" ng-maxlength="20">
+              <div ng-messages="formBairro.nomeBairro.$error" ng-if="formBairro.nomeBairro.$touched" class="text-danger">
+                <div ng-messages-include="app/template/input-ng-messages.html"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group" ng-class="{'has-error':formBairro.nomeCidade.$touched && formBairro.nomeCidade.$invalid}">
+              <label>Nome Cidade</label>
+              <input type="text" class="form-control" name="nomeCidade" ng-model="entidade.nomeCidade" ng-required="true" ng-minlength="3" ng-maxlength="20">
+              <div ng-messages="formBairro.nomeBairro.$error" ng-if="formBairro.nomeBairro.$touched" class="text-danger">
+                <div ng-messages-include="app/template/input-ng-messages.html"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group" ng-class="{'has-error':formBairro.estado.$touched && formBairro.estado.$invalid}">
+              <label>Estado</label>
+              <input type="text" class="form-control" name="estado" ng-model="entidade.estado" ng-required="true" ng-maxlength="2" style="width: 20% !important;">
+              <div ng-messages="formBairro.estado.$error" ng-if="formBairro.estado.$touched" class="text-danger">
+                <div ng-messages-include="app/template/input-ng-messages.html"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div ui-grid="gridOpcoes"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <button class="btn btn-primary" ng-click="salvar()">Salvar</button>
+        <button class="btn btn-danger" ng-click="limpar()">Limpar</button>
+      </div>
+    </div>
+  </form>
+</div>

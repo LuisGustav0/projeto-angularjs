@@ -1,0 +1,29 @@
+<div ng-controller="VizualizaroBairroController">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <span class="label label-primary">Nome Bairro:</span>
+        <label>{{ entidadeSelecionada.nomeBairro }}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <span class="label label-primary">Nome Cidade</span>
+        <label>{{ entidadeSelecionada.nomeCidade }}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <span class="label label-primary">Estado:</span>
+        <label>{{ entidadeSelecionada.estado }}</label>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" ng-click="voltarParaCadastro()">Voltar</button>
+</div>

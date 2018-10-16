@@ -1,0 +1,30 @@
+<div class="container" ng-controller="CadastroUsuarioController as cadastroUsuarioCtrl">
+  <pd-crud titulo="Cadastro de Usuário" service="cadastroUsuarioCtrl.pdCrudService" >
+    <div class="row">
+      <pd-input-text label="Nome" placeholder="Digite nome" ng-model="cadastroUsuarioCtrl.pdCrudService.entidade.nome" colspan="6" required="true">
+      </pd-input-text>
+
+      <pd-input-text label="E-Mail" placeholder="Digite e-mail" ng-model="cadastroUsuarioCtrl.pdCrudService.entidade.email" colspan="3" required="true">
+      </pd-input-text>
+    </div>
+
+    <div class="row">
+      <pd-input-text label="Login" placeholder="Digite login" ng-model="cadastroUsuarioCtrl.pdCrudService.entidade.login" colspan="4" required="true">
+      </pd-input-text>
+
+      <pd-input-text label="Senha" placeholder="Digite senha" tipo-input-text="password" ng-model="cadastroUsuarioCtrl.pdCrudService.entidade.senha"
+                     colspan="3" required="true">
+      </pd-input-text>
+
+      <pd-input-text label="Confirmar Senha" placeholder="Digite senha" tipo-input-text="password" ng-model="cadastroUsuarioCtrl.pdCrudService.entidade.senhaConfirmacao"
+                     colspan="3" required="true">
+      </pd-input-text>
+    </div>
+
+    <div class="row">
+      <pd-select label="Tipo Usuário" provider="cadastroUsuarioCtrl.tiposUsuario" ng-model="cadastroUsuarioCtrl.pdCrudService.entidade.tipoUsuario"
+                 required="true">
+      </pd-select>
+    </div>
+  </pd-crud>
+</div>
